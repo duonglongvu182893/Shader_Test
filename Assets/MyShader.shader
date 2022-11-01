@@ -10,7 +10,8 @@ Shader "Holistic/HelloShader"{// cho biet ten shader va noi cho unity se de no o
 
 			//trong truong hop nay ten cua ham chi ra raang day la surface shader, cung voi do la loai anh sang muon su dung
 			#pragma surface surf Lambert //bat dau bawng #pragma de chi thi cho unity biet code se duoc su sung nhu the nao
-			struct Input {
+			struct Input {//input data tu model's mesh (vertices,normals,uvs,...) 
+			//khai bao nhung inputdata se duoc yeu cai boi ham viet
 				float2 uvMainText;
 			};
 			fixed4 _myColour;
