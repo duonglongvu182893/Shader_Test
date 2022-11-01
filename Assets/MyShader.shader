@@ -14,7 +14,7 @@ Shader "Holistic/HelloShader"{// cho biet ten shader va noi cho unity se de no o
 			//khai bao nhung inputdata se duoc yeu cai boi ham viet
 				float2 uvMainText;
 			};
-			fixed4 _myColour;
+			fixed4 _myColour; // de truy cap vao properties da tao can phai, list lai chung va kieu du lieu ma chung luu tru
 			void surf(Input IN, inout SurfaceOutput o) {
 				o.Albedo = _myColour.rgb;
 			}
