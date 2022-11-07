@@ -1,10 +1,10 @@
-Shader "Holistic/HelloShader"{// cho biet ten shader va noi cho unity se de no o dau ->  co the tim thay tren material inspector
+Shader "Holistic/PackedPractice"{// cho biet ten shader va noi cho unity se de no o dau ->  co the tim thay tren material inspector
 	Properties{
 		// no cung co nhung editor formatting rieng de quyet dinh no se show up nhu the nao tren inspector
-		_myNormal("Exemple Normal", Color) = (1,1,1,1)
+		//_myNormal("Exemple Normal", Color) = (1,1,1,1)
 		_myColour("Exemple Colour", Color) = (1,1,1,1)
-		_myEmission("Exemple Emission", Color) = (1,1,1,1) //Declare  properties 
-	} //noi khai bao cac truong de su dung nhu cac bien trnong subshader
+		
+	} 
 
 	SubShader{ //shader processing code
 		CGPROGRAM// bat dau cua subshader
@@ -18,16 +18,15 @@ Shader "Holistic/HelloShader"{// cho biet ten shader va noi cho unity se de no o
 				float2 uvMainText;
 			};
 			fixed4 _myColour; // de truy cap vao properties da tao can phai, list lai chung va kieu du lieu ma chung luu tru
-			fixed4 _myEmission;
-			fixed4 _myNormal;
+			
 
 			// shader function lay nhung input structure da khai bao giong nhu mot cau truc da duoc xac dinh. duoc thay doi trong ham
 			//Output structure thay đổi phụ thuộc vào model ánh sáng sử dụng
 			//trong truong hop nay lighting la Lambert va theo do output la surfaceoutput 
 			void surf(Input IN, inout SurfaceOutput o) {
 				o.Albedo = _myColour.rgb;//Thay doi truong Albedo trong surfaceOutput bang myColor da declare
-				o.Emission = _myEmission.rgb;
-				o.Normal = _myNormal.rgb;
+				o.Alpha = _myColour.w;
+				
 			}
 
 		ENDCG// ket thuc cua subshader
