@@ -19,6 +19,7 @@ Shader "Holistic/Test"{
 				float2 uv_myTex; 
 				float2 uv_myEmission;
 				float3 worldRefl;
+				float3 viewDir;
 			};
 
 			fixed4 _myColour;
@@ -31,8 +32,9 @@ Shader "Holistic/Test"{
 
 			void surf(Input IN, inout SurfaceOutput o) {
 				
-				o.Albedo.rgb = tex2D(_myTex,IN.uv_myTex).rgb; 
-				o.Emission = tex2D(_myEmission,IN.uv_myEmission).rgb; 
+				o.Albedo.rgb = tex2D(_myTex,IN.uv_myTex).rgb;
+				o.Emission  = IN.viewDir.rgb;
+				//o.Emission = tex2D(_myEmission,IN.uv_myEmission).rgb; 
 				
 			}
 
