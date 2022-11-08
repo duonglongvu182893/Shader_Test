@@ -27,10 +27,9 @@ Shader "Holistic/TestProp"{
 			float4 _myVector;
 
 			void surf(Input IN, inout SurfaceOutput o) {
-				o.Albedo.r = (tex2D(_myTex,IN.uv_myTex)*_myRange*_myColour).r*_myFloat;
-				o.Albedo.gb = (tex2D(_myTex,IN.uv_myTex)*_myRange*_myColour).gb; //taking inpur texture va su dung UV value
+				
+				o.Albedo.rgb = tex2D(_myTex,IN.uv_myTex).rgb; //taking inpur texture va su dung UV value
 				//tex2D function converting texture den (sampler2D) va grabbing hold of the r,g,b channels 
-				o.Emission = texCUBE(_myCube,IN.worldRefl).rgb;
 				
 			}
 
