@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Tesst
-  m_Shader: {fileID: 4800000, guid: 97d9c506e087147cebfb60d28ed18a0d, type: 3}
+  m_Shader: {fileID: 4800000, guid: eef36aa25ae234267bfc6a3c79abf231, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
   m_LightmapFlags: 4
@@ -56,8 +56,16 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _myBump:
+        m_Texture: {fileID: 2800000, guid: ec0a14b5ab7734769bf7abebbdc3340c, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _myCube:
         m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _myDiffuse:
+        m_Texture: {fileID: 2800000, guid: 16a111cb99ef5463889239e2a2e8bf52, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _myEmission:
@@ -65,7 +73,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _myTex:
-        m_Texture: {fileID: 2800000, guid: 06215f0a42b02415599406f0a4c7862b, type: 3}
+        m_Texture: {fileID: 2800000, guid: 16a111cb99ef5463889239e2a2e8bf52, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Ints: []
@@ -88,9 +96,11 @@ Material:
     - _ZWrite: 1
     - _myFloat: 1
     - _myRange: 1
+    - _mySlider: 0
+    - _textureSlider: 2
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _myColour: {r: 0.8962264, g: 0.4523407, b: 0.4523407, a: 1}
+    - _myColour: {r: 1, g: 1, b: 1, a: 1}
     - _myVector: {r: 0.5, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []
